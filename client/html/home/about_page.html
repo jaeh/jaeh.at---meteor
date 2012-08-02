@@ -1,0 +1,82 @@
+<template name="about_page">
+{{#with page}}
+  {{#if page}}
+    <article class="page-content">
+      {{#if title}}
+        <header class="page-title">
+          <h1>{{{title}}}</h1>
+        </header>
+      {{/if}}
+      
+      <div class="page-content">
+        {{{body}}}
+        
+        {{#if current_projects}}
+          <table id="current-projects" class="about no-border margin">
+            <tbody>
+              <tr class="border-top">
+                <th>current projects:</th>
+              </tr>
+              {{#each current_projects}}
+                <tr>
+                  <td>{{{body}}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        {{/if}}
+        
+        {{#if toolset}}
+          <table id="profbio" class="about no-border">
+            <tbody>
+              <tr class="border-top">
+                <th>tools:</th><th></th>
+              </tr>
+              {{#each toolset}}
+                <tr>
+                  <td>{{name}}:</td><td>{{{body}}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        {{/if}}
+        
+        {{#if bio}}
+          <table id="bio" class="about no-border">
+            <tbody>
+              <tr class="border-top">
+                <th>personal:</th><th></th>
+              </tr>
+              {{#each bio}}
+                <tr>
+                  <td>{{date}}:</td><td>{{{body}}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        {{/if}}
+        {{#if profbio}}
+          <table id="profbio" class="about no-border">
+            <tbody>
+              <tr class="border-top">
+                <th>professional:</th><th></th>
+              </tr>
+              {{#each profbio}}
+                <tr>
+                  <td>{{date}}:</td><td>{{{body}}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        {{/if}}
+      </div>
+      
+      {{#if footer}}
+        <footer class="page-footer">
+          {{{footer}}}
+        </footer>
+      {{/if}}
+    </article>
+  {{/if}}
+{{/with}}
+</template>

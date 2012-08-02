@@ -1,0 +1,454 @@
+/* 
+Author: Jascha Ehrenreich
+Author URI: http://jaeh.at/
+Version: 1.0
+*/
+
+/* colors */
+coldarkblue = #101b70
+colflatgreen = #ff0505
+colgrey = #666
+collightblue = #40BBEE
+collightgreen = #179f0d
+collightpurple = #f4dfeb
+colorange = #ff4b00
+purple = #8f2182
+colred = #910000
+colturquoise = #08a9c2
+colyellow = #f2f200
+colwhite = #fff
+colblack = #111
+
+
+/* http//meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video 
+  margin 0
+  padding 0
+  border 0
+  font-size 100%
+  font inherit
+  vertical-align baseline
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section
+  display block
+
+body
+  line-height 1
+
+ol, ul
+  list-style-type none
+
+blockquote q
+  quotes none
+
+blockquotebefore, blockquoteafter,
+qbefore, qafter
+  content ''
+  content none
+
+table
+  border-collapse collapse
+  border-spacing 0
+  text-align left
+  
+table th, table td
+  padding 2px 10px 2px 2px
+  border 1px solid
+
+/************************ end of reset.css          ************************/
+
+
+/* general page layout */
+
+body
+  height 100%
+  width 100%
+  background-color colblack
+  font 14px Verdana, sans-serif
+  color colwhite
+  min-width 575px
+  max-width 900px
+  text-transform lowercase
+
+#wrapper
+  margin 50px
+
+header.main 
+  font-size 1.8em
+  display inline-block
+  width 100%
+  margin 0 0 20px
+
+header
+  margin 20px 0
+
+#logo
+  float left
+  height 50px
+  width 100px
+  position relative
+
+.header-nav
+  height 48px
+  border-bottom 1px solid #333
+
+.brand
+  float left
+  text-decoration none
+
+h1 
+  font-size 1.5em
+h2
+  font-size 1.3em
+h3
+  font-size 1.1em
+
+nav
+  float right
+
+nav.main 
+  margin 20px 0 0
+
+nav li
+  margin 0 0 0 0.5em
+
+nav a, .brand a
+  text-decoration none
+
+a, a:active, a:visited, a:link
+  color colwhite
+
+body.bg-white a, body.bg-white a:active, body.bg-white a:visited, body.bg-white a:link
+  color colgrey
+  
+a:hover
+  color: colgrey
+
+#container
+  clear both
+  text-align justify
+
+#container h5
+  border-top 1px solid #333
+  padding 5px
+  font-size 1.1em
+  margin 23px 0 0
+
+#container ul.about
+  margin 0 10px
+
+#container p
+  margin 10px 0
+  
+footer
+  clear both
+  
+footer.main 
+  color #555
+  font-size 0.8em
+  margin 40px 0
+  border-top 1px solid #333
+
+.me
+  background-image url(/me.png)
+  height 200px
+  width 200px
+  float left
+  margin 0 10px 10px 0
+  border-radius 8px
+
+.float-left
+  float left
+
+.float-right
+  float right
+
+.clearboth
+ clear both
+
+table.no-border
+  clear both
+  border-top 1px solid
+  margin 20px 0 0
+
+table.no-border th
+  border 0 none
+  border-top 1px solid
+
+table.no-border td
+  border 0 none
+
+table.margin td
+  padding 0 10px 20px
+
+.alert  
+  display inline-block
+  border 2px solid #f00
+  margin 15px 500px 0 0
+  border-radius 5px
+  padding 5px
+
+
+.success
+  display inline-block
+  border 2px solid #0f0
+  margin 15px 500px 0 0
+  border-radius 5px
+  padding 5px
+
+
+.message
+ margin 10px 0
+/* general page layout end */
+
+/* generic list class for horizontal lists */
+ul.inline li, ul.inline li a
+  display inline
+
+ul.inline-block li
+  display inline-block
+  width 100%
+  margin 0 0 10px
+
+colgreyed
+  color #555
+
+body.bg-grey .colgreyed
+  color #ccc
+
+/*  contact form start */
+ 
+form
+  margin 20px 0
+  font-size 0.9em
+
+.controls
+  margin 10px 0
+
+input[type=text], input[type=email]
+  width 200px
+  border 0 none
+
+input
+  border-radius 3px
+
+input.invalid
+  border 2px solid #f00
+  
+textarea
+  width 250px
+  height 100px
+  border-radius 3px
+
+label
+  display block
+
+/*  contact form end */
+
+
+/* 404 page */
+
+#page-404 .float-right
+  width 60%
+  
+/* 404 page end */
+
+/*#colorswitcher start */
+
+ul.colorswitcher
+  position fixed
+  right 5px
+  top 5px
+  
+ul#bg-colorswitcher
+  top 5px
+
+ul#txt-colorswitcher
+  top 40px
+  
+ul.colorswitcher li a
+  height 23px
+  width 23px
+  border 2px solid #ddd
+  display inline-block
+
+
+ul.colorswitcher .darkblue
+  background-color coldarkblue
+ul.colorswitcher .flatgreen
+  background-color colflatgreen
+ul.colorswitcher .grey
+  background-color colgrey
+ul.colorswitcher .lightblue
+  background-color collightblue
+ul.colorswitcher .lightgreen
+  background-color collightgreen
+ul.colorswitcher .lightpurple
+  background-color collightpurple
+ul.colorswitcher .orange
+  background-color colorange
+ul.colorswitcher .purple
+  background-color purple
+ul.colorswitcher .red
+  background-color colred
+ul.colorswitcher .turquoise
+  background-color colturquoise
+ul.colorswitcher .yellow
+  background-color colyellow
+ul.colorswitcher .white
+  background-color colwhite
+ul.colorswitcher .black
+  background-color colblack
+
+body.txt-darkblue a:hover
+  color coldarkblue
+body.txt-flatgreen a:hover
+  color colflatgreen
+body.txt-grey a:hover, body a:hover
+  color colgrey
+body.txt-lightblue a:hover
+  color collightblue
+body.txt-lightgreen a:hover
+  color collightgreen
+body.txt-lightpurple a:hover
+  color collightpurple
+body.txt-orange a:hover
+  color colorange
+body.txt-purple a:hover
+  color purple
+body.txt-red a:hover
+  color colred
+body.txt-turquoise a:hover
+  color colturquoise
+body.txt-yellow a:hover
+  color colyellow
+
+
+  
+body #container h1, body #container h2, body #container h5
+  color colgrey
+body.bg-grey #container h1, body.bg-grey #container h2, body.bg-grey #container h5
+  color colwhite
+
+  
+body.bg-grey #container a:hover
+  color colblack
+
+body.bg-white input, body.bg-white textarea
+  background-color colblack
+  color colwhite
+  
+  
+body.txt-darkblue #container h1, body.txt-darkblue #container h2, body.txt-darkblue #container th
+  color coldarkblue
+body.txt-flatgreen #container h1, body.txt-flatgreen #container h2, body.txt-flatgreen #container th
+  color colflatgreen
+body.txt-lightblue #container h1, body.txt-lightblue #container h2, body.txt-lightblue #container th
+  color collightblue
+body.txt-lightgreen #container h1, body.txt-lightgreen #container h2, body.txt-lightgreen #container th
+  color collightgreen
+body.txt-lightpurple #container h1, body.txt-lightpurple #container h2, body.txt-lightpurple #container th
+  color collightpurple
+body.txt-orange #container h1, body.txt-orange #container h2, body.txt-orange #container th
+  color colorange
+body.txt-purple #container h1, body.txt-purple #container h2, body.txt-purple #container th
+  color purple
+body.txt-red #container h1, body.txt-red #container h2, body.txt-red #container th
+  color colred
+body.txt-turquoise #container h1, body.txt-turquoise #container h2, body.txt-turquoise #container th
+  color colturquoise
+body.txt-yellow #container h1, body.txt-yellow #container h2, body.txt-yellow #container th
+  color colyellow
+
+body #logo .point
+  background-color colgrey
+  height 4px
+  width 4px
+  position absolute
+  border-radius 4px
+  
+body.bg-grey #logo .point
+  background-color colwhite
+
+body.txt-darkblue #logo .point
+  background-color coldarkblue
+body.txt-flatgreen #logo .point
+  background-color colflatgreen
+body.txt-lightblue #logo .point
+  background-color collightblue
+body.txt-lightgreen #logo .point
+  background-color collightgreen
+body.txt-lightpurple #logo .point
+  background-color collightpurple
+body.txt-orange #logo .point
+  background-color colorange
+body.txt-purple #logo .point
+  background-color purple
+body.txt-red #logo .point
+  background-color colred
+body.txt-turquoise #logo .point
+  background-color colturquoise
+body.txt-yellow #logo .point
+  background-color colyellow
+
+
+body .header-nav, body footer.main, body #container th
+  border-color colgrey
+
+body.bg-grey .header-nav, body.bg-grey footer.main, body.bg-grey #container th, body.txt-grey #container h1
+  border-color colwhite
+  
+body.bg-grey footer
+  color #999
+  
+body.txt-darkblue .header-nav, body.txt-darkblue footer.main, body.txt-darkblue #container th, body.txt-darkblue #container h1
+  border-color coldarkblue
+body.txt-flatgreen .header-nav, body.txt-flatgreen footer.main, body.txt-flatgreen #container th, body.txt-flatgreen #container h1
+  border-color colflatgreen
+body.txt-lightblue .header-nav, body.txt-lightblue footer.main, body.txt-lightblue #container th, body.txt-lightblue #container h1
+  border-color collightblue
+body.txt-lightgreen .header-nav, body.txt-lightgreen footer.main, body.txt-lightgreen #container th, body.txt-lightgreen #container h1
+  border-color collightgreen
+body.txt-lightpurple .header-nav, body.txt-lightpurple footer.main, body.txt-lightpurple #container th, body.txt-lightpurple #container h1
+  border-color collightpurple
+body.txt-orange .header-nav, body.txt-orange footer.main, body.txt-orange #container th, body.txt-orange #container h1
+  border-color colorange
+body.txt-purple .header-nav, body.txt-purple footer.main, body.txt-purple #container th, body.txt-purple #container h1
+  border-color purple
+body.txt-red .header-nav, body.txt-red footer.main, body.txt-red #container th, body.txt-red #container h1
+  border-color colred
+body.txt-turquoise .header-nav, body.txt-turquoise footer.main, body.txt-turquoise #container th, body.txt-turquoise #container h1
+  border-color colturquoise
+body.txt-yellow .header-nav, body.txt-yellow footer.main, body.txt-yellow #container th, body.txt-yellow #container h1
+  border-color colyellow
+/*#colorswitcher end */
+
+body.bg-white
+  background-color colwhite
+  color colblack
+
+body.bg-grey
+  background-color colgrey
+  color colwhite
+  
+body.bg-black
+  background-color colblack
+  color colwhite

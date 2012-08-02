@@ -1,0 +1,20 @@
+{
+  "name": "jaeh",
+  "subdomain": "jaeh",
+  "scripts": {
+    "start": ".meteor/local/build/app.js"
+  },
+  "version": "0.0.1-2",
+  "engines": {
+    "node": "0.6.x"
+  },
+  "dependencies": {
+    "mime": "1.2.x",
+    "optimist": "0.3.x",
+    "connect": "1.8.x",
+    "useragent": "1.0.x",
+    "fibers": "0.6.x",
+    "gzippo": "0.1.x",
+    "handlebars": ">= 0.1.x"
+  }
+}

@@ -1,0 +1,57 @@
+<template name="header">
+  <header class="main">
+    <a id="logo" href="/">
+      {{{logo}}}
+    </a>
+    <div class="header-nav">
+      {{>nav}}
+    </div>
+    {{add_body_class}}
+  </header>
+</template>
+
+<template name="nav">
+  <nav class="main">
+    <ul class="inline">
+     {{#each menuItems}}
+        <li class="{{text}}"><a{{is_active}} href="{{url}}">{{text}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+</template>
+
+<template name="footer">
+  {{#if footer}}
+    <footer class="main">
+      <span>{{{footer}}}</span>
+      {{>footer_nav}}
+    </footer>
+  {{/if}}
+</template>
+
+<template name="footer_nav">
+  <nav>
+    <ul class="inline">
+     {{#each menuItems}}
+        <li class="{{text}}"><a {{#if active}}class="active" {{/if}}href="{{url}}">{{text}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+</template>
+
+<template name="colorswitcher">
+  {{#if bgcolors}}
+    <ul id="bg-colorswitcher" class="inline colorswitcher">
+      {{#each bgcolors}}
+        <li><a class="{{name}}" data-bg-color="{{name}}" title="{{name}}"></a></li>
+      {{/each}}
+    </ul>
+  {{/if}}
+  {{#if colors}}
+    <ul id="txt-colorswitcher" class="colorswitcher">
+      {{#each colors}}
+        <li><a class="{{name}}" data-txt-color="{{name}}" title="{{name}}"></a></li>
+      {{/each}}
+    </ul>
+  {{/if}}
+</template>

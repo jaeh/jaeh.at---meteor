@@ -1,0 +1,30 @@
+<template name="messages_page">
+{{#with page}}
+  {{#if page}}
+    <article class="page-content">
+      {{#if title}}
+        <header class="page-title">
+          <h1>{{title}}</h1>
+        </header>
+      {{/if}}
+      
+      <div class="page-content">
+        {{{body}}}
+        {{#each messages}}
+          <ul class="message">
+            <li class="from">from: {{from}}</li>
+            {{#if url}}<li class="url">url: {{url}}</li>{{/if}}
+            <li class="subject">subject: {{subject}}</li>
+            <li class="content">content: {{content}}</li>
+          </ul>
+        {{/each}}
+      </div>
+      {{#if footer}}
+        <div class="page-footer">
+          {{footer}}
+        </div>
+      {{/if}}
+    </article>
+  {{/if}}
+{{/with}}
+</template>
