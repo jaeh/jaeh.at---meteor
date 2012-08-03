@@ -2,20 +2,31 @@
 {{#with page}}
   {{#if page}}
     <article class="page-content">
-      {{#if title}}
-        <header class="page-title">
-          <h1>{{title}}</h1>
-        </header>
-      {{/if}}
+      <header class="page-title">
+        <h1>{{title}}</h1>
+      </header>
       
       <div class="page-content">
         {{{body}}}
-        {{>contact_form}}
+        {{#each page_lists}}
+        
+          <h1 class="border-bottom">{{name}}:</h1>
+          <ul id="{{name}}">
+            {{#each page_list_items}}
+              <li>
+                <a target="utopia" href="{{url}}">{{text}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        {{/each}}
       </div>
       {{#if footer}}
         <div class="page-footer">
-          {{footer}}
+          {{{footer}}}
         </div>
+        
+        {{>contact_form}}
+        
       {{/if}}
     </article>
   {{/if}}

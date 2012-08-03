@@ -2,79 +2,39 @@
 {{#with page}}
   {{#if page}}
     <article class="page-content">
-      {{#if title}}
-        <header class="page-title">
-          <h1>{{{title}}}</h1>
-        </header>
-      {{/if}}
+      <header class="page-title">
+        <h1>{{title}}</h1>
+      </header>
       
       <div class="page-content">
         {{{body}}}
-        
-        {{#if current_projects}}
-          <table id="current-projects" class="about no-border margin">
+        {{#each page_lists}}
+          <h1 class="border-bottom">{{name}}:</h1>
+          <table id="{{name}}" class="about no-border margin">
             <tbody>
-              <tr class="border-top">
-                <th>current projects:</th>
-              </tr>
-              {{#each current_projects}}
+              {{#each page_list_items}}
                 <tr>
-                  <td>{{{body}}}</td>
+                  {{#if name}}<td class="name">{{{name}}}</td>{{/if}}
+                  {{#if date}}<td class="date">{{date}}:</td>{{/if}}
+                  <td class="body">{{{body}}}</td>
                 </tr>
               {{/each}}
             </tbody>
           </table>
-        {{/if}}
-        
-        {{#if toolset}}
-          <table id="profbio" class="about no-border">
-            <tbody>
-              <tr class="border-top">
-                <th>tools:</th><th></th>
-              </tr>
-              {{#each toolset}}
-                <tr>
-                  <td>{{name}}:</td><td>{{{body}}}</td>
-                </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        {{/if}}
-        
-        {{#if bio}}
-          <table id="bio" class="about no-border">
-            <tbody>
-              <tr class="border-top">
-                <th>personal:</th><th></th>
-              </tr>
-              {{#each bio}}
-                <tr>
-                  <td>{{date}}:</td><td>{{{body}}}</td>
-                </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        {{/if}}
-        {{#if profbio}}
-          <table id="profbio" class="about no-border">
-            <tbody>
-              <tr class="border-top">
-                <th>professional:</th><th></th>
-              </tr>
-              {{#each profbio}}
-                <tr>
-                  <td>{{date}}:</td><td>{{{body}}}</td>
-                </tr>
-              {{/each}}
-            </tbody>
-          </table>
-        {{/if}}
+          
+          <ul id="{{name}}">
+            {{#each page_list_items}}
+              <li>
+                <a target="utopia" href="{{url}}">{{text}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        {{/each}}
       </div>
-      
       {{#if footer}}
-        <footer class="page-footer">
+        <div class="page-footer">
           {{{footer}}}
-        </footer>
+        </div>
       {{/if}}
     </article>
   {{/if}}

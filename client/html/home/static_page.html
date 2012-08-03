@@ -1,25 +1,27 @@
 <template name="static_page">
-{{#with page}}
-  {{#if page}}
-    <article class="page-content">
-      {{#if title}}
-        <header class="page-title">
-          <h2>{{{title}}}</h2>
-        </header>
-      {{/if}}
+<article class="page-content">
+  <header class="page-title">
+    <h2>{{{page.title}}}</h2>
+  </header>
+
+  <div class="page-content">
+    {{{page.body}}}
+    {{#each page.page_lists}}
+    
+      <h1 class="border-bottom">{{name}}:</h1>
+      <ul id="{{name}}">
+        <li>{{name}}</li>
+        {{#each page.page_lists.page_list_items}}
+          <li>
+            <a target="utopia" href="{{url}}">{{text}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    {{/each}}
+  </div>
       
-      {{#if body}}
-        <div class="page-content">
-          {{{body}}}
-        </div>
-      {{/if}}
-      
-      {{#if footer}}
-        <footer class="page-footer">
-          {{footer}}
-        </footer>
-      {{/if}}
-    </article>
-  {{/if}}
-{{/with}}
+  <footer class="page-footer">
+    {{{footer}}}
+  </footer>
+</article>
 </template>
