@@ -21,3 +21,5 @@ Jaeh.alert = function(type, message, target) {
 
 Jaeh.current_txt_color = 'grey';
 Jaeh.current_bg_color = 'black';
+
+Meteor.subscribe('allpages');

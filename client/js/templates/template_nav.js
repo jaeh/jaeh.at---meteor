@@ -2,8 +2,8 @@
 
 Template.nav.menuItems = function () {
   var mIs = [
-    {url: '/home/about', text: "about"},
-    {url: '/home/contact', text: "contact"},
+    {url: '/about', text: "about"},
+    {url: '/contact', text: "contact"},
   ];
   
   return mIs;
@@ -12,7 +12,7 @@ Template.nav.menuItems = function () {
 Template.footer_nav.menuItems = function () {
   
   var mIs = [
-      {url: "/home/impressum", text: "impressum"}
+      {url: "/impressum", text: "impressum"}
   ];
   
   return mIs;

@@ -2,7 +2,8 @@
 
 Meteor.startup(function() {
   //deny new user accounts
-  Meteor.accounts.validateNewUser(function() {return false});
+  //Meteor.accounts.validateNewUser(function() {return false});
+  
   if(!Pages.findOne()) {
       
     var home_page = {
@@ -11,7 +12,8 @@ Meteor.startup(function() {
       body: '<p>welcome to the place in the web that i inhabit, i hope you will enjoy your stay.</p>'+
         '<p>if you want to you can read a bit <a href="/about" title="show page about me">about</a> my past and my current projects.</p>' +
         '<p>there also is a way to <a href="/contact" title="send me a message">contact</a> me.</p>',
-      footer: ''
+      footer: '',
+      published: true
     }
     
     var pageHomeId = Pages.insert(home_page);
@@ -28,7 +30,7 @@ Meteor.startup(function() {
           '<p>i somehow manage to enjoy <span class="greyed">(almost)</span> every minute of it though.</p>'+
         '</div>', 
       footer: '<p>i hope this few lines of text were able to give you a picture of my projects and my goals,</p><p> thanks for reading :)</p>',
-      hasTemplate: true
+      published: true
     }  
     
     var pageAboutId = Pages.insert(about_page);
@@ -39,7 +41,7 @@ Meteor.startup(function() {
       slug: 'contact',
       body: '<p>if you want to get in touch with me:</p><p>mail to <a href="mailto:jascha@jaeh.at">jascha@jaeh.at</a></p>',
       footer: '<p> the form below sends me a message directly to a program i wrote and always have running on my computer so it probably will be faster than the good old emails are.</p>',
-      hasTemplate: true
+      published: true
     };
     
     var pageContactId = Pages.insert(contact_page);
@@ -51,7 +53,8 @@ Meteor.startup(function() {
         '<p>email: jascha@jaeh.at</p>'+
         '<p>letters for me will be accepted at the:</p>'+
         '<p>metalab, rathausstrasse 6, 1010 wien, &ouml;sterreich</p>',
-      footer: 'this stuff has to be here to make sure there is someone to contact. this page has to be named impressum, as if the contact page would not be enough. there also has to be a postal address. there should also be a paragraph explaining why. which this paragraph just did.'
+      footer: 'this stuff has to be here to make sure there is someone to contact. this page has to be named impressum, as if the contact page would not be enough. there also has to be a postal address. there should also be a paragraph explaining why. which this paragraph just did.',
+      published: true
     };
     
     var pageImpressumId = Pages.insert(impressum_page);
