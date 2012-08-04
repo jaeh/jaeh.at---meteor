@@ -1,5 +1,6 @@
 "use strict";
 
+/** logout event **/
 Template.nav.events = {
   'click li.logout a': logout
 }
@@ -13,19 +14,14 @@ function logout(e) {
   return false;
 }
 
+
+
+/** login and notification events **/
 Template.page_auth.events = {
   'click input[type="submit"], submit #auth-form' : loginuser,
   'click #logout': logout,
   'click .close-alert': close_alert
 };
-
-
-function logout(e) {
-  if(e.preventDefault) {
-    e.preventDefault();
-  }
-  Meteor.logout();
-}
 
 function loginuser(e) {
   if(e.preventDefault) {
