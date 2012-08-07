@@ -1,0 +1,20 @@
+<template name="page_auth">
+  <article class="page-content">
+    <header class="page-title">
+      <h1>login:</h1>
+    </header>
+    {{#unless currentUser}}
+      <form id="auth-form">
+        <ul>
+          <li><label for="auth-username">username:</label><input type="text" name="auth-username" id="auth-username" /></li>
+          <li><label for="auth-password">password:</label><input type="text" name="auth-password" id="auth-password" /></li>
+          <li><input type="submit" name="auth-submit" value="login" id="auth-submit" /></li>
+        </ul>
+      </form>
+    {{/unless}}
+    {{#if currentUser}}
+      <div>logged in</div>
+      <button id="logout">logout</button>
+    {{/if}}
+  </article>
+</template>

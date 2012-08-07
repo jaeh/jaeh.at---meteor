@@ -1,0 +1,69 @@
+<head>
+  <title>jaeh.at - node is poetry </title>
+  
+  <meta name="description" content="jaeh.at is the virtual home of jascha ehrenreich">
+  <meta name="keywords" content="jaeh, webdevelopment, programming, web artist, jascha ehrenreich">
+  <meta name="author" content="jascha ehrenreich">
+  <meta property="og:image" content="http://jaeh.at/me.png" />
+  <meta property="og:type" content="blog" />
+  <meta property="og:site_name" content="jaeh.at - jascha ehrenreich" />
+  <meta property="og:url" content="http://jaeh.at" />
+  <meta property="og:title" content="jaeh.at - node is poetry" /> 
+</head>
+
+<body>
+  {{>main_body}}
+</body>
+
+<template name="main_body">
+  
+  <div id="wrapper">
+      
+    {{#if before_wrapper_show}}
+      {{>before_wrapper}}
+    {{/if}}
+      
+    
+    {{#if before_header_show}}
+      {{>before_container}}
+    {{/if}}
+    
+    {{>header}}
+    
+    {{#if after_header_show}}
+      {{>after_container}}
+    {{/if}}
+    <div id="container">
+    
+      {{#if before_container_show}}
+        {{>before_container}}
+      {{/if}}  
+  
+      {{#stellar_page}}
+      {{/stellar_page}}
+    
+      {{#if after_container_show}}
+        {{>after_container}}
+      {{/if}}
+        
+    </div>
+    
+    
+    {{#if before_footer_show}}
+      {{>before_footer}}
+    {{/if}}
+  
+    {{>footer}}
+        
+    {{#if after_footer_show}}
+      {{>after_footer}}
+    {{/if}}
+    
+    {{#if after_wrapper_show}}
+      {{>after_wrapper}}
+    {{/if}}
+    
+  </div>
+  
+  
+</template>

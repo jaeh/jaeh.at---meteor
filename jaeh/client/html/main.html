@@ -1,0 +1,55 @@
+
+<template name="header">
+    <header class="main">
+      <a id="logo" href="/">
+        {{#if logo_customize}}
+          {{{logo}}}
+        {{/if}}
+        {{#unless logo_customize}}
+          jaeh.at
+        {{/unless}}
+      </a>
+      
+      {{>nav}}
+      
+      {{add_body_class}}
+    </header>
+</template>
+
+<template name="nav">
+  {{#if above_nav_bool}}
+    {{>above_nav}}
+  {{/if}}
+  <nav class="main">
+    <ul class="inline">
+     {{#each menuItems}}
+        <li class="{{text}}"><a{{#if url}} href="{{url}}"{{/if}}>{{text}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+  {{#if below_nav_bool}}
+    {{>below_nav}}
+  {{/if}}
+</template>
+
+<template name="below_nav">
+  <div class="tes">test</div>
+</template>
+
+<template name="footer">
+  <footer class="main">
+    <span>&#9398; 1982 - {{year}} jascha ehrenreich - node is poetry</span>
+    {{>footer_nav}}
+  </footer>
+</template>
+
+<template name="footer_nav">
+  <nav>
+    <ul class="inline">
+     {{#each menuItems}}
+        <li class="{{text}}"><a {{#if active}}class="active" {{/if}}href="{{url}}">{{text}}</a></li>
+      {{/each}}
+    </ul>
+  </nav>
+</template>
+

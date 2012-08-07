@@ -1,0 +1,59 @@
+<template name="contact_page">
+{{#with page}}
+  {{#if page}}
+    <article class="page-content">
+      <header class="page-title">
+        <h1>{{title}}</h1>
+      </header>
+      
+      <div class="page-content">
+        {{{body}}}
+        {{#each page_lists}}
+        
+          <h1 class="border-bottom">{{name}}:</h1>
+          <ul id="{{name}}">
+            {{#each page_list_items}}
+              <li>
+                <a target="utopia" href="{{url}}">{{text}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        {{/each}}
+      </div>
+      {{#if footer}}
+        <div class="page-footer">
+          {{{footer}}}
+        </div>
+        
+        {{>contact_form}}
+        
+      {{/if}}
+    </article>
+  {{/if}}
+{{/with}}
+</template>
+
+<template name="contact_form">
+  <form action="#" method="post" id="contact-form">
+    <div class="controls">
+      <label for="mail-from">your email:</label>
+      <input type="email" name="mail-from" id="mail-from" />
+    </div>
+    <div class="controls">
+      <label for="mail-url">the url of your homepage: <span class="greyed">(optional)</span></label>
+      <input type="text" name="mail-url" id="mail-url" />
+    </div>
+    <div class="controls">
+      <label for="mail-subject">subject:</label>
+      <input type="text" name="mail-subject" id="mail-subject" />
+    </div>
+    
+    <div class="controls">
+      <label for="mail-content">content:</label>
+      <textarea name="mail-content" id="mail-content"></textarea>
+    </div>
+    <div class="controls">
+      <input type="submit" value="Send mail" />
+    </div>
+  </form>
+</template>

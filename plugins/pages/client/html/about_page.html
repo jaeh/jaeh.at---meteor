@@ -1,0 +1,42 @@
+<template name="about_page">
+{{#with page}}
+  {{#if page}}
+    <article class="page-content">
+      <header class="page-title">
+        <h1>{{title}}</h1>
+      </header>
+      
+      <div class="page-content">
+        {{{body}}}
+        {{#each page_lists}}
+          <h1 class="border-bottom">{{name}}:</h1>
+          <table id="{{name}}" class="about no-border margin">
+            <tbody>
+              {{#each page_list_items}}
+                <tr>
+                  {{#if name}}<td class="name">{{{name}}}</td>{{/if}}
+                  {{#if date}}<td class="date">{{date}}:</td>{{/if}}
+                  <td class="body">{{{body}}}</td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+          
+          <ul id="{{name}}">
+            {{#each page_list_items}}
+              <li>
+                <a target="utopia" href="{{url}}">{{text}}</a>
+              </li>
+            {{/each}}
+          </ul>
+        {{/each}}
+      </div>
+      {{#if footer}}
+        <div class="page-footer">
+          {{{footer}}}
+        </div>
+      {{/if}}
+    </article>
+  {{/if}}
+{{/with}}
+</template>

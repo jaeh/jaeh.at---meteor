@@ -1,0 +1,239 @@
+/* 
+Author: Jascha Ehrenreich
+Author URI: http://jaeh.at/
+Version: 1.0
+*/
+
+/* colors */
+coldarkblue = #101b70
+collightred = #ff0505
+colgrey = #666
+collightblue = #40BBEE
+collightgreen = #179f0d
+collightpurple = #f4dfeb
+colorange = #ff4b00
+purple = #8f2182
+colred = #910000
+colturquoise = #08a9c2
+colyellow = #f2f200
+colwhite = #fff
+colblack = #111
+
+
+/* general page layout */
+
+@font-face 
+  font-family pixelade
+  src url('/fonts/pixelade.ttf')
+
+body
+  height 100%
+  width 100%
+  background-color colblack
+  font 23px pixelade, Verdana, sans-serif
+  color colwhite
+  /*min-width 575px*/
+  max-width 900px
+  text-transform lowercase
+
+
+#wrapper
+  margin 50px
+
+header.main
+  position relative
+  display inline-block
+  height 50px
+  width 100%
+  margin 0 0 20px
+  border-bottom 1px solid #333
+
+header
+  margin 20px 0
+
+header.main nav.main
+  position absolute
+  right 0
+  bottom 0
+  font-size 1.5em
+
+#logo
+  position absolute
+  height 50px
+  width 100px
+
+.brand
+  float left
+  text-decoration none
+
+h1 
+  font-size 1.5em
+h2
+  font-size 1.3em
+h3
+  font-size 1.1em
+
+a
+  cursor pointer
+
+nav
+  float right
+
+nav a, .brand a
+  text-decoration none
+
+a, a:active, a:visited, a:link
+  color colwhite
+
+a:hover
+  color colgrey
+
+#container
+  clear both
+  text-align justify
+
+#container h5
+  border-top 1px solid #333
+  padding 5px
+  font-size 1.1em
+  margin 23px 0 0
+
+#container ul.about
+  margin 0 10px
+
+#container p
+  margin 10px 0
+  
+footer
+  clear both
+  
+footer.main 
+  color #555
+  font-size 0.8em
+  margin 40px 0
+  border-top 1px solid #333
+
+.me
+  background-image url(/me.png)
+  height 200px
+  width 200px
+  float left
+  margin 0 10px 30px 0
+  border-radius 8px
+
+.float-left
+  float left
+
+.float-right
+  float right
+
+.clearboth
+ clear both
+
+table.no-border
+  clear both
+  margin 10px 0 0
+
+table.no-border th
+  border 0 none
+  border-top 1px solid
+
+table.no-border td
+  border 0 none
+
+table.margin td
+  padding 0 10px 20px
+
+.alert  
+  display inline-block
+  border 2px solid #f00
+  margin 15px 500px 0 0
+  border-radius 5px
+  padding 5px
+
+
+.success
+  display inline-block
+  border 2px solid #0f0
+  margin 15px 500px 0 0
+  border-radius 5px
+  padding 5px
+
+
+.message
+ margin 10px 0
+
+h1.border-bottom
+  border-bottom 1px solid
+  clear both
+  font-size 1.1em
+  margin 20px 0 0
+
+td.name, td.date
+  width 120px
+
+/* general page layout end */
+
+/* generic list class for horizontal lists */
+ul.inline li, ul.inline li a
+  display inline
+
+ul.inline-block li
+  display inline
+
+ul.inline-block li a
+  display inline-block
+
+colgreyed
+  color #555
+
+body.bg-grey .colgreyed
+  color #ccc
+
+/*  contact form start */
+ 
+form
+  margin 20px 0
+  font-size 0.9em
+
+.controls
+  margin 10px 0
+
+input[type=text], input[type=email]
+  width 200px
+  border 0 none
+
+input
+  border-radius 3px
+
+input.invalid
+  border 2px solid #f00
+  
+textarea
+  width 250px
+  height 100px
+  border-radius 3px
+
+label
+  display block
+
+/*  contact form end */
+
+
+/* 404 page */
+
+#page-404 .float-right
+  width 60%
+  
+/* 404 page end */ 
+
+@font-face
+  font-family roughtypewriter
+  src url('/fonts/roughtypewriter.eot')
+  src local("roughtypewriter"), url('/fonts/roughtypewriter.ttf') format("truetype")
+
+
+@font-face
+  font-family simplelife
+  src url('/fonts/simplelife.eot')
+  src local("simplelife"), url('/fonts/simplelife.ttf') format("truetype")
