@@ -1,0 +1,317 @@
+/* 
+Author: Jascha Ehrenreich
+Author URI: http://jaeh.at/
+Version: 1.0
+*/
+
+/* colors */
+coldarkblue = #101b70
+collightred = #ff0505
+colgrey = #666
+collightblue = #40BBEE
+collightgreen = #179f0d
+collightpurple = #f4dfeb
+colorange = #ff4b00
+purple = #8f2182
+colred = #910000
+colturquoise = #08a9c2
+colyellow = #f2f200
+colwhite = #fff
+colblack = #111
+
+
+/*#colorswitcher start */
+
+#colorswitcher-container
+  position fixed
+  right 5px
+  top 5px
+  font-size 18px
+  line-height 18px
+  font-family pixelade
+
+.colorswitcher
+  position absolute
+
+#bg-colorswitcher
+  right 30px
+  width 90px
+
+#txt-colorswitcher
+  top 40px
+  right 0
+  position absolute
+  
+div.inline div
+    float left
+    
+#bg-colorswitcher a, #txt-colorswitcher a 
+  height 23px
+  width 23px
+  border 2px solid #ddd
+  display inline-block
+
+#colorswitcher-visibility-toggle
+  position absolute
+  right 300px
+  top 2px
+
+.colorswitcher .darkblue
+  background-color coldarkblue
+.colorswitcher .lightred
+  background-color collightred
+.colorswitcher .grey
+  background-color colgrey
+.colorswitcher .lightblue
+  background-color collightblue
+.colorswitcher .lightgreen
+  background-color collightgreen
+.colorswitcher .lightpurple
+  background-color collightpurple
+.colorswitcher .orange
+  background-color colorange
+.colorswitcher .purple
+  background-color purple
+.colorswitcher .red
+  background-color colred
+.colorswitcher .turquoise
+  background-color colturquoise
+.colorswitcher .yellow
+  background-color colyellow
+.colorswitcher .white
+  background-color colwhite
+.colorswitcher .black
+  background-color colblack
+
+body.txt-darkblue a:hover
+  color coldarkblue
+body.txt-lightred a:hover
+  color collightred
+body.txt-grey a:hover, body a:hover
+  color colgrey
+body.txt-lightblue a:hover
+  color collightblue
+body.txt-lightgreen a:hover
+  color collightgreen
+body.txt-lightpurple a:hover
+  color collightpurple
+body.txt-orange a:hover
+  color colorange
+body.txt-purple a:hover
+  color purple
+body.txt-red a:hover
+  color colred
+body.txt-turquoise a:hover
+  color colturquoise
+body.txt-yellow a:hover
+  color colyellow
+
+
+  
+body #container h1, body #container h2, body #container h5
+  color colgrey
+body.bg-grey #container h1, body.bg-grey #container h2, body.bg-grey #container h5
+  color colwhite
+
+  
+body.bg-grey.txt-grey a:hover
+  color colblack
+
+body.bg-white input, body.bg-white textarea
+  background-color colblack
+  color colwhite
+  
+  
+body.txt-darkblue #container h1, body.txt-darkblue #container h2, body.txt-darkblue #container th
+  color coldarkblue
+body.txt-lightred #container h1, body.txt-lightred #container h2, body.txt-lightred #container th
+  color collightred
+body.txt-lightblue #container h1, body.txt-lightblue #container h2, body.txt-lightblue #container th
+  color collightblue
+body.txt-lightgreen #container h1, body.txt-lightgreen #container h2, body.txt-lightgreen #container th
+  color collightgreen
+body.txt-lightpurple #container h1, body.txt-lightpurple #container h2, body.txt-lightpurple #container th
+  color collightpurple
+body.txt-orange #container h1, body.txt-orange #container h2, body.txt-orange #container th
+  color colorange
+body.txt-purple #container h1, body.txt-purple #container h2, body.txt-purple #container th
+  color purple
+body.txt-red #container h1, body.txt-red #container h2, body.txt-red #container th
+  color colred
+body.txt-turquoise #container h1, body.txt-turquoise #container h2, body.txt-turquoise #container th
+  color colturquoise
+body.txt-yellow #container h1, body.txt-yellow #container h2, body.txt-yellow #container th
+  color colyellow
+
+
+
+body header.main, body footer.main, body #container th
+  border-color colgrey
+
+body.bg-grey header.main, body.bg-grey footer.main, body.bg-grey #container th, body.txt-grey #container h1
+  border-color colwhite
+  
+body.bg-grey footer
+  color #999
+  
+body.txt-darkblue header.main, body.txt-darkblue footer.main, body.txt-darkblue #container th, body.txt-darkblue #container h1
+  border-color coldarkblue
+body.txt-lightred header.main, body.txt-lightred footer.main, body.txt-lightred #container th, body.txt-lightred #container h1
+  border-color collightred
+body.txt-lightblue header.main, body.txt-lightblue footer.main, body.txt-lightblue #container th, body.txt-lightblue #container h1
+  border-color collightblue
+body.txt-lightgreen header.main, body.txt-lightgreen footer.main, body.txt-lightgreen #container th, body.txt-lightgreen #container h1
+  border-color collightgreen
+body.txt-lightpurple header.main, body.txt-lightpurple footer.main, body.txt-lightpurple #container th, body.txt-lightpurple #container h1
+  border-color collightpurple
+body.txt-orange header.main, body.txt-orange footer.main, body.txt-orange #container th, body.txt-orange #container h1
+  border-color colorange
+body.txt-purple header.main, body.txt-purple footer.main, body.txt-purple #container th, body.txt-purple #container h1
+  border-color purple
+body.txt-red header.main, body.txt-red footer.main, body.txt-red #container th, body.txt-red #container h1
+  border-color colred
+body.txt-turquoise header.main, body.txt-turquoise footer.main, body.txt-turquoise #container th, body.txt-turquoise #container h1
+  border-color colturquoise
+body.txt-yellow header.main, body.txt-yellow footer.main, body.txt-yellow #container th, body.txt-yellow #container h1
+  border-color colyellow
+/*#colorswitcher end */
+
+body.bg-white
+  background-color colwhite
+  color colblack
+
+body.bg-white a
+  color colgrey
+
+body.bg-white .fonts a
+  color colgrey
+  
+
+body.bg-grey
+  background-color colgrey
+  color colwhite
+
+
+body.bg-grey .fonts a
+  color colblack
+  
+
+body.bg-black
+  background-color colblack
+  color colwhite
+
+body.bg-black a
+  color colwhite
+  
+
+
+/** FONTS **/
+
+#fonts-colorswitcher
+  right 140px
+  width 150px
+  
+  
+  
+#fonts-colorswitcher a
+  font-size 20px
+
+  
+body.font-pixelade
+  font-family pixelade
+  
+body.font-pixelade #wrapper
+  font-size 1.2em
+  
+#fonts-colorswitcher a.pixelade
+  font-family pixelade
+  font-size 21px
+
+body.font-verdana
+  font-family Verdana
+  
+body.font-verdana #wrapper
+  font-size 0.8em
+
+#fonts-colorswitcher a.verdana
+  font-family Verdana
+  font-size 14px
+
+body.font-times
+  font-family Times New Roman
+
+body.font-times #wrapper
+  font-size 1em
+
+#fonts-colorswitcher a.times
+  font-family Times New Roman
+  font-size 18px
+
+body.font-simplelife
+  font-family simplelife
+
+body.font-simplelife #wrapper
+  font-size 0.8em
+
+  
+#fonts-colorswitcher a.simplelife
+  font-family simplelife
+  font-size 16px
+  
+body.font-roughtypewriter
+  font-family roughtypewriter
+
+body.font-simplelife #wrapper
+  font-size 1em
+
+
+#fonts-colorswitcher a.roughtypewriter
+  font-family roughtypewriter
+  font-size 16px
+  
+  
+
+#fontsize-colorswitcher
+  right 5px
+  top 320px
+  
+
+#fontsize-colorswitcher a
+  display block
+  height 20px
+  width 20px
+  overflow hidden
+  
+#fontsize-colorswitcher a.fontsize-70
+  font-size 20px
+  
+#fontsize-colorswitcher a.fontsize-100
+  font-size 25px
+
+#fontsize-colorswitcher a.fontsize-150
+  font-size 30px
+
+#fontsize-colorswitcher a.fontsize-200
+  font-size 40px
+
+body.fontsize-70 
+  font-size 10px
+
+body.fontsize-100 
+  font-size 15px
+
+body.fontsize-150
+  font-size 20px
+
+body.fontsize-200 
+  font-size 25px
+  
+  
+/*
+body.font-pixelade 
+body.font-verdana
+body.font-times
+body.font-simplelife
+body.font-roughtypewriter
+*/
+/** END OF FONTS **/

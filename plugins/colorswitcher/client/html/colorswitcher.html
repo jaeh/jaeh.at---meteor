@@ -1,0 +1,43 @@
+<template name="after_wrapper">
+  {{>colorswitcher}}
+</template>
+
+<template name="colorswitcher">
+  {{#if enabled}}
+    <div id="colorswitcher-container" class="{{visibility_class}}" data-visibility="{{visibility_class}}">      
+      {{#if hide}}
+        <div id="colorswitcher-visibility-toggle">
+          <a id="colorswitcher-visibility-btn">hide</a>
+        </div>
+      {{/if}}
+      {{#if fonts}}
+        <div id="fonts-colorswitcher" class="inline fonts colorswitcher">
+          {{#each fonts}}
+            <a class="{{name}}" data-font="{{name}}" title="{{name}}">abc</a>
+          {{/each}}
+        </div>
+      {{/if}}
+      {{#if bgcolors}}
+        <div id="bg-colorswitcher" class="inline-block colorswitcher">
+          {{#each bgcolors}}
+            <a class="{{name}}" data-bg-color="{{name}}" title="{{name}}"></a>
+          {{/each}}
+        </div>
+      {{/if}}
+      {{#if colors}}
+        <div id="txt-colorswitcher" class="colorswitcher">
+          {{#each colors}}
+            <div><a class="{{name}}" data-txt-color="{{name}}" title="{{name}}"></a></div>
+          {{/each}}
+        </div>
+      {{/if}}
+       {{#if fontsizes}}
+        <div id="fontsize-colorswitcher" class="fonts colorswitcher">
+          {{#each fontsizes}}
+            <a class="fontsize-{{name}}" data-fontsize="{{name}}" title="fontsize {{name}}%">+</a>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+  {{/if}}
+</template>
