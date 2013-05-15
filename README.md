@@ -1,7 +1,7 @@
 Jaeh.at
 ======
 
-the page i have running on [my page](http://jaeh.at) using [Stellar](https://github.com/jonathankingston/stellar/) and [Meteor](http://meteor.com/).
+the page i !HAD! running on [my page](http://jaeh.at) using [Stellar](https://github.com/jonathankingston/stellar/) and [Meteor](http://meteor.com/).
 Current version: 0.0.1
 
 
